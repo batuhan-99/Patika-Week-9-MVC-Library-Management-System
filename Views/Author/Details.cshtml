@@ -1,0 +1,11 @@
+﻿@model LibraryManagementSystem.Models.Author
+
+<h2>@Model.FirstName Details</h2>
+
+<p><strong>FirstName:</strong> @Model.FirstName</p>
+<p><strong>LastName:</strong> @Model.LastName</p>
+<p><strong>DateOfBirth:</strong> @Model.DateOfBirth</p>
+
+
+<a href="/Book/Edit/@Model.Id" class="btn btn-warning">Edit</a>
+<a href="/Book/List" class="btn btn-secondary">Back to List</a>

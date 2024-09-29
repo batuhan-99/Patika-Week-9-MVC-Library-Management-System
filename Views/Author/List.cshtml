@@ -1,0 +1,27 @@
+﻿@model IEnumerable<LibraryManagementSystem.Models.Author>
+
+<h2>Author List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var author in Model)
+        {
+            <tr>
+                <td>@author.FirstName</td>
+                <td>@author.LastName</td>
+                <td>
+                    <a href="/Author/Details/@author.Id" class="btn btn-info">Details</a>
+                    <a href="/Author/Edit/@author.Id" class="btn btn-warning">Edit</a>
+                    <a href="/Author/Delete/@author.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

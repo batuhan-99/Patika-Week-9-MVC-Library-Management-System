@@ -1,0 +1,33 @@
+﻿@model List<LibraryManagementSystem.Models.BookViewModel>
+
+<h2>Book List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>title</th>
+            <th>genre</th>
+            <th>ısbn</th>
+            <th>publish date</th>
+            <th>copies available</th>
+            <th>actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Title</td>
+                <td>@book.Genre</td>
+                <td>@book.ISBN</td>
+                <td>@book.PublishDate.ToShortDateString()</td>
+                <td>@book.CopiesAvailable</td>
+                <td>
+                    <a href="/book/details/@book.Id" class="btn btn-info">details</a>
+                    <a href="/book/edit/@book.Id" class="btn btn-warning">edit</a>
+                    <a href="/book/delete/@book.Id" class="btn btn-danger">delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

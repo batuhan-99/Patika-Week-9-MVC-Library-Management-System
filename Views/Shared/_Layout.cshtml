@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Library Management System</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Ana Sayfa</a></li>
+                <li><a href="/Home/About">Hakkında</a></li>
+                <li><a href="/Auth/SignUp">Kayıt Ol</a></li>
+                <li><a href="/Auth/Login">Giriş Yap</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        @RenderBody() <!-- Sayfaların içerikleri burada yüklenecek -->
+    </div>
+
+    <footer>
+        © 2024 Library Management System. MUSTAFA BATUHAN ÇINAR.
+    </footer>
+
+    <script src="~/js/site.js"></script>
+</body>
+</html>

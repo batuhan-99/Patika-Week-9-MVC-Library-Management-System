@@ -1,0 +1,11 @@
+﻿@model LibraryManagementSystem.Models.Book
+
+<h2>@Model.Title Details</h2>
+
+<p><strong>Genre:</strong> @Model.Genre</p>
+<p><strong>ISBN:</strong> @Model.ISBN</p>
+<p><strong>Publish Date:</strong> @Model.PublishDate.ToShortDateString()</p>
+<p><strong>Copies Available:</strong> @Model.CopiesAvailable</p>
+
+<a href="/Book/Edit/@Model.Id" class="btn btn-warning">Edit</a>
+<a href="/Book/List" class="btn btn-secondary">Back to List</a>

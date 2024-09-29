@@ -1,0 +1,17 @@
+﻿@model LibraryManagementSystem.Models.Book
+
+<h2>Kitabı Sil</h2>
+<p>Bu kitabı silmek istediğinizden emin misiniz?</p>
+
+<div>
+    <h4>@Model.Title</h4>
+    <p>Tür: @Model.Genre</p>
+    <p>Yayın Tarihi: @Model.PublishDate.ToShortDateString()</p>
+    <p>ISBN: @Model.ISBN</p>
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Sil</button>
+    <a asp-action="List" class="btn btn-secondary">İptal</a>
+</form>
